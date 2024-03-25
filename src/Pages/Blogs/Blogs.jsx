@@ -1,11 +1,16 @@
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const Blogs = () => {
-    const blogs = useLoaderData()
+    const blogsData = useLoaderData()
+    const [blogs,setBlogs]= useState([])
+    useEffect(() => {
+        setBlogs(blogsData)
+    },[])
     
     return (
         <section>
-
+                
         </section>
     );
 };
